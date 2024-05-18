@@ -12,9 +12,9 @@ services:
     command: npm start
   api:
     restart: always
-    build: ./app
+    build: ./api
     volumes:
-      - "./app:/app"
+      - "./api:/app"
       - /app/node_modules
     ports:
       - "3000:3000"
