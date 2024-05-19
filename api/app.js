@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import createHttpError from "http-errors";
 import cookieParser from "cookie-parser";
 import indexRouter from "./routes";
@@ -12,8 +13,9 @@ sequelize.connect();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 
-app.use("/v1/", indexRouter);
+app.use("/api/", indexRouter);
 
 app.use(function (req, res, next) {
   next(createHttpError(404));

@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
+=======
+import { memo } from "react";
+import Dashboard from "./pages/Dashboard";
+
+>>>>>>> Stashed changes
 function App() {
   return (
     <div>
@@ -6,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

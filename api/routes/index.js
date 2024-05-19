@@ -1,9 +1,11 @@
 import { Router } from "express";
+import { Rate } from "../controllers/rate.controller";
+import { SubscriptionController } from "../controllers/subscription.controller";
 
 const router = Router();
 
-router.get("/", function (req, res, next) {
-  res.send('All is okay');
-});
+router.get("/rate", Rate.getRate);
+
+router.post("/subscribe", SubscriptionController.subscribeUser);
 
 export default router;
