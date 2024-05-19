@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root_user",
+    "password": "12345",
+    "database": "exchange_rate_database",
+    "host": "exchange-rate-db-1",
+    "dialect": "mariadb"
+  },
+  "test": {
+    "username": "root_user",
+    "password": "12345",
+    "database": "exchange_rate_database",
+    "host": "exchange-rate-db-1",
+    "dialect": "mariadb"
+  },
+  "production": {
+    "username": "root_user",
+    "password": "12345",
+    "database": "exchange_rate_database",
+    "host": "exchange-rate-db-1",
+    "dialect": "mariadb"
+  }
+}
