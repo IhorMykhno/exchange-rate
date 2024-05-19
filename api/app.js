@@ -1,7 +1,8 @@
 import createError from "http-errors";
 import express from "express";
+import createHttpError from "http-errors";
 import cookieParser from "cookie-parser";
-import indexRouter from "./routes/index.js";
+import indexRouter from "./routes";
 
 const app = express();
 const port = 3000;
@@ -13,7 +14,7 @@ app.use(cookieParser());
 app.use("/v1/", indexRouter);
 
 app.use(function (req, res, next) {
-  next(createError(404));
+  next(createHttpError(404));
 });
 
 app.listen(port, () => {
